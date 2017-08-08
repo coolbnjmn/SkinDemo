@@ -1,0 +1,6 @@
+framework module Pods_SkinDemo {
+  umbrella header "Pods-SkinDemo-umbrella.h"
+
+  export *
+  module * { export * }
+}
