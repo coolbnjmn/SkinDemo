@@ -6,9 +6,9 @@
 	<dict>
 		<key>regularText</key>
 		<dict>
-			<key>name</key>
-			<string>Regular</string>
 			<key>style</key>
+			<string>Regular</string>
+			<key>name</key>
 			<string>Zapfino</string>
 			<key>size</key>
 			<integer>24</integer>

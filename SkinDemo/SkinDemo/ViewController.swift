@@ -24,7 +24,7 @@ class ViewController: UIViewController {
     }
     
     func setupTheme() {
-        view.theme_backgroundColor = ThemeColorPicker(keyPath: "Colors.red")
+        view.theme_backgroundColor = currentThemeIsBase ? ThemeColorPicker(keyPath: "Colors.orange") : ThemeColorPicker(keyPath: "Colors.red")
         imageView.theme_image = ThemeImagePicker(keyPath: "Images.icon")
         let fontKeyPrefix = "Fonts.regularText"
         label.theme_font = ThemeFontPicker(nameKeyPath: "\(fontKeyPrefix).name", sizeKeyPath: "\(fontKeyPrefix).size", styleKeyPath: "\(fontKeyPrefix).style", map: {
