@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		75AFA744C52DE0702CD4CCF0 /* Pods_SkinDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9FF7CAF4312A7F924160592 /* Pods_SkinDemo.framework */; };
+		B21E4ED81F39AA92006F70B2 /* BaseConfiguration.plist in Resources */ = {isa = PBXBuildFile; fileRef = B21E4ED71F39AA92006F70B2 /* BaseConfiguration.plist */; };
+		B21E4EDA1F39BE51006F70B2 /* SkinConfiguration.plist in Resources */ = {isa = PBXBuildFile; fileRef = B21E4ED91F39BE51006F70B2 /* SkinConfiguration.plist */; };
 		B225C44E1F39A93C00FC7AAC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B225C44D1F39A93C00FC7AAC /* AppDelegate.swift */; };
 		B225C4501F39A93C00FC7AAC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B225C44F1F39A93C00FC7AAC /* ViewController.swift */; };
 		B225C4531F39A93C00FC7AAC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B225C4511F39A93C00FC7AAC /* Main.storyboard */; };
@@ -18,6 +20,8 @@
 /* Begin PBXFileReference section */
 		39ACF8A95F871D97EC90F940 /* Pods-SkinDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkinDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-SkinDemo/Pods-SkinDemo.release.xcconfig"; sourceTree = "<group>"; };
 		48B34062C8A1519827E67217 /* Pods-SkinDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkinDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SkinDemo/Pods-SkinDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		B21E4ED71F39AA92006F70B2 /* BaseConfiguration.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = BaseConfiguration.plist; sourceTree = "<group>"; };
+		B21E4ED91F39BE51006F70B2 /* SkinConfiguration.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SkinConfiguration.plist; sourceTree = "<group>"; };
 		B225C44A1F39A93C00FC7AAC /* SkinDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SkinDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B225C44D1F39A93C00FC7AAC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B225C44F1F39A93C00FC7AAC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -84,6 +88,8 @@
 				B225C4541F39A93C00FC7AAC /* Assets.xcassets */,
 				B225C4561F39A93C00FC7AAC /* LaunchScreen.storyboard */,
 				B225C4591F39A93C00FC7AAC /* Info.plist */,
+				B21E4ED71F39AA92006F70B2 /* BaseConfiguration.plist */,
+				B21E4ED91F39BE51006F70B2 /* SkinConfiguration.plist */,
 			);
 			path = SkinDemo;
 			sourceTree = "<group>";
@@ -151,6 +157,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B21E4ED81F39AA92006F70B2 /* BaseConfiguration.plist in Resources */,
+				B21E4EDA1F39BE51006F70B2 /* SkinConfiguration.plist in Resources */,
 				B225C4581F39A93C00FC7AAC /* LaunchScreen.storyboard in Resources */,
 				B225C4551F39A93C00FC7AAC /* Assets.xcassets in Resources */,
 				B225C4531F39A93C00FC7AAC /* Main.storyboard in Resources */,
@@ -387,6 +395,7 @@
 				B225C45E1F39A93C00FC7AAC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

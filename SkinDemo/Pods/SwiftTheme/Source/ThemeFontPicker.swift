@@ -10,8 +10,8 @@ import UIKit
 
 public final class ThemeFontPicker: ThemePicker {
     
-    public convenience init(keyPath: String, map: @escaping (Any?) -> UIFont?) {
-        self.init(v: { map(ThemeManager.value(for: keyPath)) })
+    public convenience init(nameKeyPath: String, sizeKeyPath: String, styleKeyPath: String, map: @escaping (Any?, Any?, Any?) -> UIFont?) {
+        self.init(v: { map(ThemeManager.value(for: nameKeyPath), ThemeManager.value(for: sizeKeyPath), ThemeManager.value(for: styleKeyPath)) })
     }
     
     public convenience init(fonts: UIFont...) {

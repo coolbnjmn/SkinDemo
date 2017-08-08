@@ -1,14 +1,20 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SkinDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,8 +22,44 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BlA-7b-Tih">
+                                <rect key="frame" x="137.5" y="283.5" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="HcA-0T-hYB"/>
+                                    <constraint firstAttribute="width" secondItem="BlA-7b-Tih" secondAttribute="height" multiplier="1:1" id="sDr-rB-Jl6"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nen-Cn-8q5">
+                                <rect key="frame" x="28" y="255" width="319" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Sn-JK-bWt">
+                                <rect key="frame" x="163" y="393.5" width="51" height="31"/>
+                                <connections>
+                                    <action selector="switchChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="IKo-YB-7Km"/>
+                                </connections>
+                            </switch>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="nen-Cn-8q5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CFA-xQ-5rA"/>
+                            <constraint firstItem="BlA-7b-Tih" firstAttribute="top" secondItem="nen-Cn-8q5" secondAttribute="bottom" constant="8" id="Oaa-lH-KMm"/>
+                            <constraint firstItem="BlA-7b-Tih" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Srb-eC-KMU"/>
+                            <constraint firstItem="nen-Cn-8q5" firstAttribute="top" relation="greaterThanOrEqual" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="Wfy-ko-I0m"/>
+                            <constraint firstItem="BlA-7b-Tih" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="jTE-Gc-UZ2"/>
+                            <constraint firstItem="1Sn-JK-bWt" firstAttribute="top" secondItem="BlA-7b-Tih" secondAttribute="bottom" constant="10" id="jir-9f-Uba"/>
+                            <constraint firstItem="nen-Cn-8q5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="12" id="jvw-kE-QQu"/>
+                            <constraint firstItem="1Sn-JK-bWt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ppD-I2-Dqx"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="BlA-7b-Tih" id="WRP-Hg-Bs7"/>
+                        <outlet property="label" destination="nen-Cn-8q5" id="UvI-Zm-2b2"/>
+                        <outlet property="switch" destination="1Sn-JK-bWt" id="lpj-CS-vax"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

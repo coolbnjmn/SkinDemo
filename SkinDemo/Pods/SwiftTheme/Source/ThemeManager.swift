@@ -13,12 +13,13 @@ public let ThemeUpdateNotification = "ThemeUpdateNotification"
 public enum ThemePath {
     
     case mainBundle
+    case customBundle(AnyClass)
     case sandbox(Foundation.URL)
     
     public var URL: Foundation.URL? {
         switch self {
-        case .mainBundle        : return nil
         case .sandbox(let path) : return path
+        default: return nil
         }
     }
     
@@ -26,6 +27,8 @@ public enum ThemePath {
         switch self {
         case .mainBundle:
             return Bundle.main.path(forResource: name, ofType: "plist")
+        case .customBundle(let sameAsClass):
+            return Bundle(for: sameAsClass).path(forResource: name, ofType: "plist")
         case .sandbox(let path):
             let name = name.hasSuffix(".plist") ? name : name + ".plist"
             return Foundation.URL(string: name, relativeTo: path)?.path
